@@ -44,35 +44,4 @@ for line in lines:
             prev_head = orig_head
             visited.append(prev_head)
 
-        # print(visited)
-        # print(prev_head)
-        # print(head)
-        # print() 
-    #     prev_head_x, prev_head_y = head
-    #     move(head, nav)
-    #     print(head)
-    #     print()
-    #     x, y = head
-
-    #     if x == prev_head_x or y == prev_head_y:
-    #         visited.append((prev_head_x, prev_head_y))
-
-    #     if max_dist >= 2:
-    #         prev_head_x, prev_head_y = x, y
-        
-
-        # if (tail[0] == head[0] and abs(tail[1] - head[1]) >= 2) or \
-        # (tail[1] == head[1] and abs(tail[0] - head[0]) >= 2):
-
-        #     move(tail, nav)
-
-        # elif (tail[0] != head[0] and tail[1] != head[1]):
-        #     x_dist, y_dist = abs(tail[0] - head[0]), abs(tail[1] - head[1])
-        #     max_dist = max(x_dist, y_dist)
-
-        #     if max_dist >= 2:
-        #         tail = [prev_head_x, prev_head_y]
-
-        # head = tail
-
 print(len(set(visited)))
