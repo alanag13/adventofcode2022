@@ -121,5 +121,5 @@ for row in viz_grid:
         if cell:
             viz_count += 1
 
-print(viz_count)
-print(max((max((col for col in rows)) for rows in scenic_grid)))
+print(f"Part one: {viz_count}")
+print(f"Part two: {max((max((col for col in rows)) for rows in scenic_grid))}")
