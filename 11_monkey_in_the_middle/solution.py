@@ -54,12 +54,11 @@ class MonkeyWorld:
 
     def _do_turn(self, monkey, next_item):
         while next_item is not None:
-            if next_item:
-                to_throw = self._reducer(next_item)
-                if to_throw % monkey.test_divisor == 0:
-                    self._monkey_list[monkey.t_target].receive(to_throw)
-                else:
-                    self._monkey_list[monkey.f_target].receive(to_throw)
+            to_throw = self._reducer(next_item)
+            if to_throw % monkey.test_divisor == 0:
+                self._monkey_list[monkey.t_target].receive(to_throw)
+            else:
+                self._monkey_list[monkey.f_target].receive(to_throw)
             next_item = monkey.next_item()
 
     def do_round(self):
